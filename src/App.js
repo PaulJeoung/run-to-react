@@ -5,6 +5,9 @@ import MyApp from './MyApp';
 import './MyApp.css';
 import { useState } from 'react';
 
+import R040_ReactstrapCard from './R040_ReactstrapCard';
+import R039_ReactstrapBottons from './R039_ReactstrapBottons';
+import R038_ReactstrapButtonGroup from './R038_ReactstrapButtonGroup';
 import R037_ReactstrapDropdown from './R037_ReactstrapDropdown';
 import R036_ReactstrapBreadcrumbs from './R036_ReactstrapBreadcrumbs';
 import R035_ReactstrapBadges from './R035_ReactstrapBadges';
@@ -20,6 +23,12 @@ function App() {
         <p id='p1'> Curiculum is not enough, should read a book NOW!! </p>
       </div>
       <div id='exercise'>
+        <hr></hr>
+        <R040_ReactstrapCard />
+        <hr></hr>
+        <R039_ReactstrapBottons />
+        <hr></hr>
+        <R038_ReactstrapButtonGroup />
         <hr></hr>
         <R037_ReactstrapDropdown />
         <hr></hr>
