@@ -1,12 +1,14 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import MyApp from './MyApp';
 import './MyApp.css';
 import { useState } from 'react';
 
-import R057_Sweetalert2Position from './R057_Sweetalert2Position';
-import R058_Sweetalert2Confirm from  './R058_Sweetalert2Confirm'
+import R037_ReactstrapDropdown from './R037_ReactstrapDropdown';
+import R036_ReactstrapBreadcrumbs from './R036_ReactstrapBreadcrumbs';
+import R035_ReactstrapBadges from './R035_ReactstrapBadges';
+import R034_ReactstrapAlerts from  './R034_ReactstrapAlerts';
 
 function App() {
   return (
@@ -18,11 +20,15 @@ function App() {
         <p id='p1'> Curiculum is not enough, should read a book NOW!! </p>
       </div>
       <div id='exercise'>
-
-        <R058_Sweetalert2Confirm />
-
-        <R057_Sweetalert2Position />
-
+        <hr></hr>
+        <R037_ReactstrapDropdown />
+        <hr></hr>
+        <R036_ReactstrapBreadcrumbs />
+        <hr></hr>
+        <R035_ReactstrapBadges />
+        <hr></hr>
+        <R034_ReactstrapAlerts />
+        <hr></hr>
       </div>
       <hr></hr>
       <div id='cording'>
