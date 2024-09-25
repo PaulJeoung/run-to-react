@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import MyApp from './MyApp';
@@ -39,7 +39,55 @@ import R072_onSubmit from './R072_onSubmit';
 import R073_ReactRef from './R073_ReactRef';
 import R074_ReactCurrying from './R074_ReactCurrying';
 import R075_ReactHoc from './Hoc/R075_ReactHoc';
+import R076_ContextApi from './Context/R076_ContextApi';
+import R77_ContextApi from './Context/R77_ContextApi';
 
+import StrAddButton from './StrAddButton';
+import {connect} from 'react-redux';
+
+class App extends Component {
+  render() {
+    return (
+      // R081~R083 부분 
+      <div>
+        <h1>Start React 200!</h1>
+        {/* <span>{this.props.store.getState().data.str}</span><br/> */}
+        <span>{this.props.str}</span><br/>
+        {/* <StrAddButton store={this.props.store}/> */}
+        <StrAddButton AppProp="200" />
+      </div>
+      // R078~R080 부분
+      // <div>
+      //   <h1>Start React 200!</h1>
+      //   <span>{this.props.store.getState().data.str}</span><br/>
+      //   <StrAddButton store={this.props.store} />
+      // </div>
+    );
+  }
+}
+// R081~R083 부분 추가
+let mapStateToProps = (state, props) => {
+  console.log('Props from index.js : '+props.indexProp)
+  return {
+    str: state.data.str,
+  };
+};
+App = connect(mapStateToProps, null)(App);
+// 기존
+export default App;
+
+
+// function App() {
+//   return (
+//     <div>
+//       <h4>Start React 200!</h4>
+//       <R77_ContextApi />
+//     </div>
+//   );
+// }
+
+/* 
+  Redux 변경으로 아래 미사용
 function App() {
   return (
     <div>
@@ -51,8 +99,11 @@ function App() {
       </div>
       <div id='exercise'>
         <hr></hr>
+        <R77_ContextApi />
+        <hr></hr>
+        <R076_ContextApi />
+        <hr></hr>
         <R075_ReactHoc name = 'React200' />
-        {/*
         <hr></hr>
         <R074_ReactCurrying />
         <hr></hr>
@@ -98,7 +149,7 @@ function App() {
         <R046_ReactstrapJumbotron />
         <hr></hr>
         <R045_ReactstrapInputGroup />
-        {/* <hr></hr>
+        <hr></hr>
         <R044_ReactstrapForm />
         <hr></hr>
         <R043_ReacstrapFade />
@@ -120,7 +171,7 @@ function App() {
         <R035_ReactstrapBadges />
         <hr></hr>
         <R034_ReactstrapAlerts />
-        <hr></hr> */}
+        <hr></hr>
       </div>
       <hr></hr>
       <div id='cording'>
@@ -132,3 +183,5 @@ function App() {
 }
 
 export default App;
+
+*/
