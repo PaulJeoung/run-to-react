@@ -5,6 +5,8 @@ import MyApp from './MyApp';
 import './MyApp.css';
 import { useState } from 'react';
 
+import R067_onChange from './R067_onChange';
+import R066_onClick from './R066_onClick';
 import R065_Promise from './R065_Promise';
 import R064_Promise from './R064_Promise';
 import R063_CallbackFunc from './R063_CallbackFunc';
@@ -13,7 +15,8 @@ import R061_AxiosGet from './R061_AxiosGet';
 import R060_FetchPostOthers from './R060_FetchPostOthers';
 import R060_FetchPost from './R060_FetchPost';
 import R059_FetchGet from './R059_FetchGet';
-
+import R049_ReactstrapNavbar from './R049_ReactstrapNavbar';
+import R048_ReactstrapModal from './R048_ReactstrapModal';
 import R047_ReactstrapListGroup from './R047_ReactstrapListGroup';
 import R046_ReactstrapJumbotron from './R046_ReactstrapJumbotron';
 import R045_ReactstrapInputGroup from './R045_ReactstrapInputGroup';
@@ -39,6 +42,13 @@ function App() {
         <p id='p1'> Curiculum is not enough, should read a book NOW!! </p>
       </div>
       <div id='exercise'>
+
+        <hr></hr>
+        <R067_onChange />
+        <hr></hr>
+        <R066_onClick />
+        
+
         {/* <hr></hr>
         <R065_Promise />
         <hr></hr>
@@ -56,7 +66,10 @@ function App() {
         <hr></hr>
         <R059_FetchGet />
 
-
+        <hr></hr>
+        <R049_ReactstrapNavbar />
+        <hr></hr>
+        <R048_ReactstrapModal />
         <hr></hr>
         <R047_ReactstrapListGroup />
         <hr></hr>
