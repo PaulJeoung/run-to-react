@@ -4,7 +4,7 @@ import Children from "./contextChildren77";
 const {Provider, Consumer} = React.createContext()
 export {Consumer}
 
-class R77_ContextApi extends React.Component {
+class R077_ContextApi extends React.Component {
     constructor (props) {
         super(props);
         this.setStateFunc = this.setStateFunc.bind(this)
@@ -24,4 +24,4 @@ class R77_ContextApi extends React.Component {
         )
     }
 }
-export default R77_ContextApi;
+export default R077_ContextApi;

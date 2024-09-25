@@ -40,21 +40,27 @@ import R073_ReactRef from './R073_ReactRef';
 import R074_ReactCurrying from './R074_ReactCurrying';
 import R075_ReactHoc from './Hoc/R075_ReactHoc';
 import R076_ContextApi from './Context/R076_ContextApi';
-import R77_ContextApi from './Context/R77_ContextApi';
+import R077_ContextApi from './Context/R077_ContextApi';
 
-import StrAddButton from './StrAddButton';
-import {connect} from 'react-redux';
+import StrAddButton from './StrAddButton'; // R078 ~ R083
+import {connect} from 'react-redux'; // R078 ~ R083
 
 class App extends Component {
   render() {
     return (
-      // R081~R083 부분 
       <div>
-        <h1>Start React 200!</h1>
-        {/* <span>{this.props.store.getState().data.str}</span><br/> */}
-        <span>{this.props.str}</span><br/>
-        {/* <StrAddButton store={this.props.store}/> */}
-        <StrAddButton AppProp="200" />
+        <R075_ReactHoc name = 'React200' />
+        <R076_ContextApi />
+        <R077_ContextApi />
+        <hr></hr>
+        {/* R081~R083 부분 */}
+        <div>
+          <h1>Start React 200!</h1>
+          {/* <span>{this.props.store.getState().data.str}</span><br/> */}
+          <span>{this.props.str}</span><br/>
+          {/* <StrAddButton store={this.props.store}/> */}
+          <StrAddButton AppProp="200" />
+        </div>
       </div>
       // R078~R080 부분
       // <div>
@@ -76,13 +82,9 @@ App = connect(mapStateToProps, null)(App);
 // 기존
 export default App;
 
-
 // function App() {
 //   return (
-//     <div>
-//       <h4>Start React 200!</h4>
-//       <R77_ContextApi />
-//     </div>
+//     <div><R77_ContextApi /></div>
 //   );
 // }
 
